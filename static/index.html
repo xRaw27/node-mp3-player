@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/libs/simplebar/simplebar.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/libs/jquery.js"></script>
+    <script src="/libs/marquee.js"></script>
+    <script src="/libs/three.js"></script>
+    <script src="/libs/orbit_controls.js"></script>
+    <script src="/static/js/Main.js"></script>
+    <script src="/static/js/Net.js"></script>
+    <script src="/static/js/Ui.js"></script>
+    <script src="/static/js/Music.js"></script>
+    <script src="/static/js/Visual.js"></script>
+</head>
+
+<body>
+
+    <div id="scroll" data-simplebar>
+        <div id="albums"></div>
+    </div>
+
+    <div id="playlist">
+        <div data-simplebar>
+            <div id="title">
+                Spotifaj Premium
+                <div id="copyrights">Royalty Free Music from Bensound</div>
+            </div>
+            <div id="files"></div>
+        </div>
+    </div>
+
+    <div id="controlPanel">
+        <div id="currentPlaying">
+            <div id="currentPlayingSong" class="marquee"></div>
+            <div id="currentPlayingAlbum"></div>
+        </div>
+        <div id="controls">
+            <div id="prev">
+                <img src="/static/icons/baseline_skip_previous_white_18dp.png" alt="prev">
+            </div>
+            <div id="pause">
+                <img id="icon-play" src="/static/icons/baseline_play_circle_outline_white_18dp.png" alt="play">
+                <img id="icon-pause" src="/static/icons/baseline_pause_circle_outline_white_18dp.png" alt="pause">
+            </div>
+            <div id="next">
+                <img src="/static/icons/baseline_skip_next_white_18dp.png" alt="next">
+            </div>
+        </div>
+        <div id="progressBarContainer">
+            <div id="currentTime"></div>
+            <div id="duration"></div>
+            <div id="progressBar">
+                <div id="progress"></div>
+            </div>
+        </div>
+
+        <div id="customPlaylists"></div>
+    </div>
+
+    <div id="visual"></div>
+
+    <!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script> -->
+    <script src="/libs/simplebar/simplebar.js"></script>
+    <script>
+        new SimpleBar($('#scroll')[0], { autoHide: false });
+    </script>
+</body>
+
+</html>
